@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="446316a2-1acd-471e-976d-fe6ec3050512" name="Default Changelist" comment="" />
+    <list default="true" id="446316a2-1acd-471e-976d-fe6ec3050512" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/error/classes/httpError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/error/classes/httpError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/type/helpers/ValueOf.ts" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +19,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fmsfDKZSsZoFYkPpgB0daLurmv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1596834704194</updated>
       <workItem from="1596834705422" duration="1427000" />
-      <workItem from="1596882966076" duration="13572000" />
+      <workItem from="1596882966076" duration="16848000" />
+      <workItem from="1596915330797" duration="1901000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-import ValueOf from "../../types/helpers/ValueOf";
+import { ValueOf } from "../../types/helpers/ValueOf";
 
 const statusCodes = {
     badRequest: 400,
