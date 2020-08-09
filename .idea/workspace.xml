@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="446316a2-1acd-471e-976d-fe6ec3050512" name="Default Changelist" comment="">
+    <list default="true" id="446316a2-1acd-471e-976d-fe6ec3050512" name="Default Changelist" comment="chore: renamed folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/error/classes/httpError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/error/classes/httpError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/type/helpers/ValueOf.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +38,30 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Brandon 2\Documents\Projects\loopoversite\back\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Brandon 2\Documents\Projects\loopoversite\back\db\seeds\examples" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,11 +73,86 @@
       <updated>1596834704194</updated>
       <workItem from="1596834705422" duration="1427000" />
       <workItem from="1596882966076" duration="16848000" />
-      <workItem from="1596915330797" duration="1901000" />
+      <workItem from="1596915330797" duration="10823000" />
+      <workItem from="1596971371086" duration="15737000" />
     </task>
+    <task id="LOCAL-00001" summary="chore: renamed folder">
+      <created>1596917496981</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596917496981</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: users table">
+      <created>1596973409041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596973409042</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: testing scripts">
+      <created>1596977489646</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596977489646</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: session and cors">
+      <created>1596993775432</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596993775432</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: auth system">
+      <created>1596993787449</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596993787449</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: renamed folder" />
+    <MESSAGE value="feat: users table" />
+    <MESSAGE value="chore: testing scripts" />
+    <MESSAGE value="feat: session and cors" />
+    <MESSAGE value="feat: auth system" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: auth system" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="2" key="CommitChangelistDialog2" timestamp="1596993785045">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="574" y="2" key="CommitChangelistDialog2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1596993785045" />
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1596991141111">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1596991141111" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1596991141111">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.center/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1596991141111" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1596991141110">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.left/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1596991141110" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1596991141111">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.right/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1596991141111" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1596995456243">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1596995456243" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1596923661785">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1596923661785" />
   </component>
 </project>
