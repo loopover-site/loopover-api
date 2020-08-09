@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "fresh-testdb": "dropdb --if-exists test-loopover && createdb test-loopover",
+        "test": "npm run fresh-testdb && cross-env NODE_ENV=test mocha -r ./register.js 'src/**/*.test.ts' --exit"
     },
     "devDependencies": {
         "@types/bcrypt": "^3.0.0",
