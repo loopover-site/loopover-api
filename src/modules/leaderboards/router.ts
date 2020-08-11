@@ -19,7 +19,7 @@ router.get("/", async (ctx, next) => {
 router.post("/submit", validateSchema(submitBody, "body"), async (ctx, next) => {
     const { category, subCategory, time, evidence } = ctx.request.body as SubmitBody<typeof ctx.request.body.category>;
 
-    const username = ctx.session?.user ? await findUser("id", ctx.session.user) : ctx.request.body.username;
+    const username = ctx.session?.user ? (await findUser("id", ctx.session.user))!.username : ctx.request.body.username;
 
     const userHasAccount = !!ctx.session?.user;
 
