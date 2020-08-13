@@ -34,7 +34,23 @@ describe("Leaderboards router", () => {
             .set("Accept", "application/json")
             .expect(200);
 
-        expect(response.body.length).to.deep.equal(1);
+        expect(response.body.length).to.deep.equal(4);
+    });
+    it("Gets leaderboards by category", async () => {
+        const response = await agent
+            .get("/api/leaderboards/5x5")
+            .set("Accept", "application/json")
+            .expect(200);
+
+        expect(response.body.length).to.deep.equal(3);
+    });
+    it("Gets leaderboards", async () => {
+        const response = await agent
+            .get("/api/leaderboards/5x5/regular")
+            .set("Accept", "application/json")
+            .expect(200);
+
+        expect(response.body.length).to.deep.equal(2);
     });
     it("Updates a solve", async () => {
         await agent
@@ -48,7 +64,7 @@ describe("Leaderboards router", () => {
             .set("Accept", "application/json")
             .expect(200);
 
-        expect(response.body[0].time).to.equal(10);
+        expect(response.body[response.body.length - 1].time).to.equal(10);
     });
     it("Doesn't update a solve if it's slow", async () => {
         await agent
@@ -62,6 +78,6 @@ describe("Leaderboards router", () => {
             .set("Accept", "application/json")
             .expect(200);
 
-        expect(response.body[0].time).to.equal(10);
+        expect(response.body[response.body.length - 1].time).to.equal(10);
     });
 });

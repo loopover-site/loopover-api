@@ -6,11 +6,27 @@ import findUser from "../users/actions/findUser";
 import addScore from "./actions/addScore";
 import { HttpError } from "../../common/error/classes/httpError";
 import getLeaderboards from "./actions/getLeaderboards";
+import getLeaderboardsByCategory from "./actions/getLeaderboardsByCategory";
+import getLeaderboardsByCategoryAndSubCategory from "./actions/getLeaderboardsByCategoryAndSubCategory";
 
 const router = new Router({ prefix: "/leaderboards" });
 
 router.get("/", async (ctx, next) => {
     const leaderboards = await getLeaderboards();
+    ctx.status = 200;
+    ctx.body = leaderboards;
+    await next();
+});
+
+router.get("/:category", async (ctx, next) => {
+    const leaderboards = await getLeaderboardsByCategory(ctx.params.category);
+    ctx.status = 200;
+    ctx.body = leaderboards;
+    await next();
+});
+
+router.get("/:category/:subcategory", async (ctx, next) => {
+    const leaderboards = await getLeaderboardsByCategoryAndSubCategory(ctx.params.category, ctx.params.subcategory);
     ctx.status = 200;
     ctx.body = leaderboards;
     await next();

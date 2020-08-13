@@ -26,7 +26,7 @@ router.post("/loggedIn", async (ctx, next) => {
     ctx.status = 200;
     ctx.body = {
         loggedIn: !!ctx.session!.user
-    }
+    };
 
     await next();
 })
