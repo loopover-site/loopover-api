@@ -1,11 +1,45 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
+model knex_migrations {
+  id             Int       @default(autoincrement()) @id
+  name           String?
+  batch          Int?
+  migration_time DateTime?
+}
+
+model knex_migrations_lock {
+  index     Int  @default(autoincrement()) @id
+  is_locked Int?
+}
+
+model leaderboards {
+  id             Int     @default(autoincrement()) @id
+  category       String
+  subCategory    String
+  date           Int
+  time           Float
+  evidence       String
+  userHasAccount Boolean
+  username       String
+}
+
+model sessions {
+  id      Int    @default(autoincrement()) @id
+  key     String
+  maxAge  Int
+  session Json
+}
+
+model users {
+  id       Int    @default(autoincrement()) @id
+  username String @unique
+  password String
+  role     String
 }
