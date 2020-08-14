@@ -14,6 +14,7 @@
         "build-test": "tsc"
     },
     "devDependencies": {
+        "@prisma/cli": "^2.4.1",
         "@types/bcrypt": "^3.0.0",
         "@types/chai": "^4.2.12",
         "@types/hapi__joi": "^17.1.4",
