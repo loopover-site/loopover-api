@@ -1,4 +1,4 @@
-import { ValueOf } from "../../../src/common/types/helpers/ValueOf";
+import { ValueOf } from "../../src/common/types/helpers/ValueOf";
 
 type Category = "3x3" | "4x4" | "5x5" | "6x6" | "7x7" | "8x8" | "9x9" | "10x10" | "11x11" | "12x12" | "13x13" | "14x14" | "15x15" | "20x20";
 

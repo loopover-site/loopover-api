@@ -24,10 +24,10 @@ model leaderboards {
   category       String
   subCategory    String
   date           Int
-  time           Int     @default(0)
   evidence       String
   userHasAccount Boolean
   username       String
+  time           Int     @default(0)
 }
 
 model sessions {
