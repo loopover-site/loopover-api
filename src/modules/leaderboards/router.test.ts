@@ -11,7 +11,7 @@ const agent = request.agent(server);
 const newSolve: SubmitBody<"5x5"> = {
     category: "5x5",
     subCategory: "regular",
-    time: 12.345,
+    time: 12345,
     evidence: "google.com",
     username: "blah"
 }
