@@ -7,18 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model knex_migrations {
-  id             Int       @default(autoincrement()) @id
-  name           String?
-  batch          Int?
-  migration_time DateTime?
-}
-
-model knex_migrations_lock {
-  index     Int  @default(autoincrement()) @id
-  is_locked Int?
-}
-
 model leaderboards {
   id             Int     @default(autoincrement()) @id
   category       String
