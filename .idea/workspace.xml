@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="446316a2-1acd-471e-976d-fe6ec3050512" name="Default Changelist" comment="feat: leaderboards and submitting">
-      <change afterPath="$PROJECT_DIR$/src/modules/users/actions/createUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/users/router.ts" afterDir="false" />
+    <list default="true" id="446316a2-1acd-471e-976d-fe6ec3050512" name="Default Changelist" comment="refactor: switch all knex">
+      <change afterPath="$PROJECT_DIR$/src/modules/users/actions/userGames.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/users/router.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/apiRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/apiRouter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/leaderboards/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/leaderboards/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/users/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/users/router.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/prisma" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,10 +46,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Brandon 2\Documents\Projects\loopoversite\back\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
     <property name="ts.external.directory.path" value="C:\Users\Brandon 2\Documents\Projects\loopoversite\back\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Brandon 2\Documents\Projects\loopoversite\back\prisma" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Brandon 2\Documents\Projects\loopoversite\back\db\seeds\examples" />
     </key>
@@ -88,7 +89,13 @@
       <workItem from="1596915330797" duration="10823000" />
       <workItem from="1596971371086" duration="30741000" />
       <workItem from="1597013007437" duration="19537000" />
-      <workItem from="1597154321741" duration="6424000" />
+      <workItem from="1597154321741" duration="14459000" />
+      <workItem from="1597279262638" duration="611000" />
+      <workItem from="1597317098825" duration="6815000" />
+      <workItem from="1597421622660" duration="13373000" />
+      <workItem from="1597489875678" duration="23026000" />
+      <workItem from="1597592702812" duration="8518000" />
+      <workItem from="1597661296443" duration="11277000" />
     </task>
     <task id="LOCAL-00001" summary="chore: renamed folder">
       <created>1596917496981</created>
@@ -146,7 +153,91 @@
       <option name="project" value="LOCAL" />
       <updated>1597061981715</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: create user">
+      <created>1597162734077</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597162734077</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: bug with leaderboard submissions">
+      <created>1597162745568</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597162745568</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: leaderboard seeds to db">
+      <created>1597318302800</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597318302801</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: more leaderboards routes">
+      <created>1597320648554</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597320648554</updated>
+    </task>
+    <task id="LOCAL-00013" summary="chore: prisma init">
+      <created>1597422166305</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597422166305</updated>
+    </task>
+    <task id="LOCAL-00014" summary="chore: prisma introspection">
+      <created>1597422677751</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597422677751</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chore: set up prisma with ts">
+      <created>1597426138289</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597426138289</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chore: remove all the knex files">
+      <created>1597601647499</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597601647499</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: set up prisma">
+      <created>1597601707907</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597601707907</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix: small bug with types">
+      <created>1597601812306</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1597601812306</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactor: use prisma instead of knex">
+      <created>1597601850694</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1597601850694</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactor: remove all traces of knex">
+      <created>1597601924543</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1597601924543</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,48 +252,64 @@
     <MESSAGE value="chore: idea stuff" />
     <MESSAGE value="feat: leaderboards and submitting" />
     <MESSAGE value="chore: update package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update package.json" />
+    <MESSAGE value="feat: create user" />
+    <MESSAGE value="fix: bug with leaderboard submissions" />
+    <MESSAGE value="chore: leaderboard seeds to db" />
+    <MESSAGE value="feat: more leaderboards routes" />
+    <MESSAGE value="chore: prisma init" />
+    <MESSAGE value="chore: prisma introspection" />
+    <MESSAGE value="chore: set up prisma with ts" />
+    <MESSAGE value="chore: remove all the knex files" />
+    <MESSAGE value="refactor: set up prisma" />
+    <MESSAGE value="fix: small bug with types" />
+    <MESSAGE value="refactor: use prisma instead of knex" />
+    <MESSAGE value="refactor: remove all traces of knex" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: remove all traces of knex" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="2" key="CommitChangelistDialog2" timestamp="1597061979117">
+    <state x="574" y="2" key="CommitChangelistDialog2" timestamp="1597601923473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="574" y="2" key="CommitChangelistDialog2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597061979117" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597154442182">
+    <state x="574" y="2" key="CommitChangelistDialog2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597601923473" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597322649649">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597154442182" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1597012956316">
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597322649649" />
+    <state width="1899" height="368" key="GridCell.Tab.0.bottom" timestamp="1597597586385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597012956316" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1597012956314">
+    <state width="1899" height="368" key="GridCell.Tab.0.bottom/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597597586385" />
+    <state width="1899" height="368" key="GridCell.Tab.0.center" timestamp="1597597586385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.center/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597012956314" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1597012956314">
+    <state width="1899" height="368" key="GridCell.Tab.0.center/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597597586385" />
+    <state width="1899" height="368" key="GridCell.Tab.0.left" timestamp="1597597586385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.left/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597012956314" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1597012956315">
+    <state width="1899" height="368" key="GridCell.Tab.0.left/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597597586385" />
+    <state width="1899" height="368" key="GridCell.Tab.0.right" timestamp="1597597586385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.right/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597012956315" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1597078305067">
+    <state width="1899" height="368" key="GridCell.Tab.0.right/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597597586385" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1597321350271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597078305067" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597061810506">
+    <state x="461" y="165" key="SettingsEditor/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597321350271" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597602160881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597061810506" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1597161422390">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597602160881" />
+    <state x="668" y="237" width="583" height="566" key="find.popup" timestamp="1597601899261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597161422390" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597159894719">
+    <state x="668" y="237" width="583" height="566" key="find.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597601899261" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1597490984901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597159894719" />
+    <state x="616" y="240" key="run.anything.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597490984901" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597593207560">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1597593207560" />
   </component>
 </project>
