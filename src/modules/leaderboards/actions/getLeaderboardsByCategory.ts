@@ -1,7 +1,7 @@
 import Score from "../types/Score";
-import knex from "../../../../db/knex";
 import { Category } from "../types/Category";
+import prisma from "../../../../prisma/prisma";
 
 export default <T extends Category>(category: T) => {
-    return knex<Score<T>>("leaderboards").where({ category }).select("*");
+    return prisma.leaderboards.findMany({ where: { category } }) as Promise<Score<T>[]>;
 }

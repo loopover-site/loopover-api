@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model leaderboards {
+  id             Int     @default(autoincrement()) @id
+  category       String
+  subCategory    String
+  date           Int
+  evidence       String
+  userHasAccount Boolean
+  username       String
+  time           Int     @default(0)
+}
+
+model sessions {
+  id      Int    @default(autoincrement()) @id
+  key     String
+  maxAge  Int
+  session Json
+}
+
+model users {
+  id       Int    @default(autoincrement()) @id
+  username String @unique
+  password String
+  role     String
+}

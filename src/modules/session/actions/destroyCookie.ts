@@ -1,8 +1,5 @@
-import knex from "../../../../db/knex";
-
 import { Session } from "../types/Session";
+import prisma from "../../../../prisma/prisma";
 
 export const destroyCookie = async (key: Session["key"]) =>
-    knex<Session>("sessions")
-        .where({ key })
-        .del("*");
+    prisma.sessions.deleteMany({ where: { key } });

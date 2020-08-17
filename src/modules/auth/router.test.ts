@@ -4,16 +4,15 @@ import { expect } from "chai";
 
 import { server } from "../..";
 
-import users from "../../../db/seeds/examples/users";
-import knex from "../../../db/knex";
+import users from "../../../prisma/examples/users";
+import { seed } from "../../../prisma/prisma";
 
 const agent = request.agent(server);
 
 describe("Auth router", () => {
     before(async function () {
         this.timeout(20000);
-        await knex.migrate.latest();
-        await knex.seed.run();
+        await seed();
     });
 
     it("Logs-in a user", async () => {
