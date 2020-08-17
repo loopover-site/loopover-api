@@ -13,6 +13,7 @@ model leaderboards {
   subCategory    String
   date           Int
   evidence       String
+  notes          String  @default("")
   userHasAccount Boolean
   username       String
   time           Int     @default(0)

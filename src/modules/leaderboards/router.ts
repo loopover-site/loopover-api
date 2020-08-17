@@ -35,11 +35,13 @@ router.get("/:category/:subcategory", async (ctx, next) => {
 router.post("/submit", validateSchema(submitBody, "body"), async (ctx, next) => {
     const { category, subCategory, time, evidence } = ctx.request.body as SubmitBody<typeof ctx.request.body.category>;
 
+    const notes = ctx.request.body.notes || "";
+
     const username = ctx.session?.user ? (await findUser("id", ctx.session.user))!.username : ctx.request.body.username;
 
     const userHasAccount = !!ctx.session?.user;
 
-    const resp = await addScore(category, subCategory, time, evidence, userHasAccount, username);
+    const resp = await addScore(category, subCategory, time, evidence, userHasAccount, username, notes);
 
     if (!resp) {
         throw new HttpError(400, "Your solve does not beat your current record");

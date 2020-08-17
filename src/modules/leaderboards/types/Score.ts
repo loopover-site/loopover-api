@@ -10,4 +10,5 @@ export default interface Score <T extends Category>{
     evidence: string;
     userHasAccount: boolean;
     username: string;
+    notes: string;
 }
