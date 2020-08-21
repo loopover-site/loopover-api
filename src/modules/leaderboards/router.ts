@@ -8,6 +8,7 @@ import { HttpError } from "../../common/error/classes/httpError";
 import getLeaderboards from "./actions/getLeaderboards";
 import getLeaderboardsByCategory from "./actions/getLeaderboardsByCategory";
 import getLeaderboardsByCategoryAndSubCategory from "./actions/getLeaderboardsByCategoryAndSubCategory";
+import videoEvidenceThreshold from "./actions/videoEvidenceThreshold";
 
 const router = new Router({ prefix: "/leaderboards" });
 
@@ -29,6 +30,15 @@ router.get("/:category/:subcategory", async (ctx, next) => {
     const leaderboards = await getLeaderboardsByCategoryAndSubCategory(ctx.params.category, ctx.params.subcategory);
     ctx.status = 200;
     ctx.body = leaderboards;
+    await next();
+});
+
+router.get("/videoThreshold/:category/:subcategory", async (ctx, next) => {
+    const threshold = await videoEvidenceThreshold(ctx.params.category, ctx.params.subcategory);
+    ctx.status = 200;
+    ctx.body = {
+        place: threshold
+    };
     await next();
 });
 
