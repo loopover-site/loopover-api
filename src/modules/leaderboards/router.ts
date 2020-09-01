@@ -9,6 +9,9 @@ import getLeaderboards from "./actions/getLeaderboards";
 import getLeaderboardsByCategory from "./actions/getLeaderboardsByCategory";
 import getLeaderboardsByCategoryAndSubCategory from "./actions/getLeaderboardsByCategoryAndSubCategory";
 import videoEvidenceThreshold from "./actions/videoEvidenceThreshold";
+import { requireAdmin } from "../auth/middleware/requireAdmin";
+import verifySolve from "./actions/verifySolve";
+import getQueue from "./actions/getQueue";
 
 const router = new Router({ prefix: "/leaderboards" });
 
@@ -17,6 +20,13 @@ router.get("/", async (ctx, next) => {
     ctx.status = 200;
     ctx.body = leaderboards;
     await next();
+});
+
+router.get("/queue", async (ctx) => {
+    const queue = await getQueue();
+    ctx.status = 200;
+    ctx.body = queue;
+    // await next(); Not sure why this breaks stuff, but it does.
 });
 
 router.get("/:category", async (ctx, next) => {
@@ -62,6 +72,17 @@ router.post("/submit", validateSchema(submitBody, "body"), async (ctx, next) => 
         message: "Successfully submitted solve"
     };
 
+    await next();
+});
+
+router.patch("/verify", requireAdmin(), async (ctx, next) => {
+    const { id } = ctx.request.body;
+    const resp = await verifySolve(id);
+    if (!resp) {
+        throw new HttpError(400, "That solve cannot be verified!");
+    }
+    ctx.status = 200;
+    ctx.body = "Successfully verified solve";
     await next();
 });
 

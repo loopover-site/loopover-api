@@ -17,6 +17,7 @@ model leaderboards {
   userHasAccount Boolean
   username       String
   time           Int     @default(0)
+  queued         Boolean @default(false)
 }
 
 model sessions {

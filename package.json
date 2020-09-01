@@ -8,10 +8,8 @@
         "start-dev": "node -r ./register.js src/index.ts",
         "dev": "nodemon",
         "start": "node ./dist/src/index.js",
-        "fresh-testdb": "dropdb --if-exists test-loopover && createdb test-loopover",
-        "fresh-testdb-prisma": "dropdb --if-exists test-loopover && createdb test-loopover && prisma migrate up --experimental",
+        "fresh-testdb": "dropdb --if-exists test-loopover && createdb test-loopover && prisma migrate up --experimental",
         "test": "npm run fresh-testdb && cross-env NODE_ENV=test mocha -r ./register.js 'src/**/*.test.ts' --exit",
-        "test-prisma": "npm run fresh-testdb-prisma && cross-env NODE_ENV=test mocha -r ./register.js 'src/**/*.test.ts' --exit",
         "build": "tsc && prisma migrate up --experimental",
         "build-test": "tsc",
         "sync": "prisma schema push --experimental --force"
